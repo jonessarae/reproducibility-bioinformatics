@@ -6,9 +6,7 @@
 
 export TMPDIR=/lscratch/$SLURM_JOB_ID
 export FASTA=/data/jonesse3/ucsc.hg19.fasta
-#export GTF=/data/jonesse3/gencode.v19.annotation.gtf
-#export GTF=/data/jonesse3/h19.annotation
-export GTF=/data/jonesse3/gencode.v19.chr_patch_hapl_scaff.annotation.gtf
+export GTF=/data/jonesse3/gencode.v19.annotation.gtf
 export READS="/data/jonesse3/SRR2989969_1.fastq /data/jonesse3/SRR2989969_2.fastq"
 export STAR=/data/jonesse3/star2.4.1b.simg
 

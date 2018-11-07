@@ -16,7 +16,7 @@ module load singularity
 mkdir $TMPDIR/GenomeForPass2
 
 #go to directory
-cd #TMPDIR/GenomeForPass2
+cd $TMPDIR/GenomeForPass2
 
 #edit SJ.out.tab file to get SJ.out.tab.Pass1.sjdb, filters out non-canonical junctions
 awk 'BEGIN {OFS="\t"; strChar[0]="."; strChar[1]="+"; strChar[2]="-";} {if($5>0){print $1,$2,$3,strChar[$4]}}' /data/jonesse3/*SJ.out.tab > SJ.out.tab.Pass1.sjdb

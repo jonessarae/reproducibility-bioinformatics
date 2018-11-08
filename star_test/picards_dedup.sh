@@ -3,7 +3,7 @@
 ### Script to remove duplicates using picard 1.110 ###
 
 IMAGE=/data/jonesse3/picard_1.110.simg
-PICARD='java -jar /opt/picard-tools-1.110/MarkDuplicates.jar'
+PICARD='java -Xmx???g -XX:ParallelGCThreads=5 -jar /opt/picard-tools-1.110/MarkDuplicates.jar'
 
 #load singularity
 module load singularity

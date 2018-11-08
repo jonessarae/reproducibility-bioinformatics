@@ -21,7 +21,7 @@ cd $TMPDIR/GenomeForPass2
 #edit SJ.out.tab file to get SJ.out.tab.Pass1.sjdb, filters out non-canonical junctions
 awk 'BEGIN {OFS="\t"; strChar[0]="."; strChar[1]="+"; strChar[2]="-";} {if($5>0){print $1,$2,$3,strChar[$4]}}' /data/jonesse3/*49_SJ.out.tab > SJ.out.tab.Pass1_49.sjdb
 #remove lines starting with chrm
-sed '/^chrm/d' SJ.out.tab.Pass1.sjdb > SJ.out.tab.Pass1_49.sjdb
+sed '/^chrm/d' SJ.out.tab.Pass1_49.sjdb > SJ.out.tab.Pass1_49.sjdb
 
 #generate genome indices from the 1st pass
 singularity exec --bind /data/jonesse3,$TMPDIR $STAR STAR \
